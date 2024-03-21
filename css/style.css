@@ -1,425 +1,568 @@
 * {
-    padding: 0;
-    margin: 0;
-    border: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  border: border-box;
+}
+
+.body {
+  /* background-image: url("../images/blur.jpg"); */
+  background-size: cover;
+}
 
 /* Nav Bar */
-#container{
-    background-color: #0f1111;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    }
+#container {
+  background-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
 
-#logo{
-    font-family: "Lucida Handwriting" , cursive;
-    margin-top: 5.5px;
-    font-size: 30px;
-    color: #2de38e;
-    text-decoration: none;
-    height: 37px;
-    width: 90px;
-    }
+#logo {
+  font-family: "Lucida Handwriting", cursive;
+  margin-top: 5.5px;
+  font-size: 30px;
+  color: #2de38e;
+  text-decoration: none;
+  height: 37px;
+  width: 90px;
+}
 
-#myCart{
-    color: white;
-    padding-top: 16px;
-    text-decoration: none;
-    font-size: 19px;
-    }
+#myCart {
+  color: white;
+  padding-top: 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
 
-#contact{
-    color: white;
-    padding-top: 16px;
-    text-decoration: none;
-    font-size: 19px;
-    }
+#contact {
+  color: white;
+  padding-top: 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
 
-#log-in{
-    color: white;
-    padding-top: 16px;
-    text-decoration: none;
-    font-size: 19px;
-    }
+#log-in {
+  color: white;
+  padding-top: 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
 
-#sign-up{
-    color: white;
-    padding-top: 16px;
-    text-decoration: none;
-    font-size: 19px;    
-    }
+#sign-up {
+  color: white;
+  padding-top: 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
 
+#inp {
+  height: 30px;
+  width: 190px;
+  position: relative;
+  top: 10px;
+  border-radius: 4px;
+  border: none;
+  font-family: "Lucida Console", monospace;
+  padding-left: 3px;
+  padding-top: 3px;
+  font-size: 13px;
+}
 
-#inp{
-    height: 30px;
-    width: 190px;
-    position: relative;
-    top: 10px;
-    border-radius: 4px;
-    border: none;
-    font-family: "Lucida Console" , monospace;
-    padding-left: 3px;
-    padding-top: 3px;
-    font-size: 13px;
-    }
+#inp:focus::placeholder {
+  color: transparent;
+}
 
-#inp:focus::placeholder{
-    color: transparent;
-    }
+#but {
+  height: 30px;
+  width: 50px;
+  position: relative;
+  top: 10px;
+  margin-left: -135px;
+  background-color: #2de38e;
+  font-family: monaco, monospace;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
 
-#but{
-    height: 30px;
-    width: 50px;
-    position: relative;
-    top: 10px;
-    margin-left: -135px;
-    background-color: #2de38e;
-    font-family: monaco , monospace;
-    border-radius: 4px;
-    border: none;
-    align-items: center;
-    }
+.border {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+}
 
-.border{
-    font-family: "Lucida console" , monospace;
-    }
- 
-.border:hover{
-    /* border: 2px solid white; */
-    transform: scale(1.1);
-    }
+.border:hover {
+  /* border: 2px solid white; */
+  transform: scale(1.1);
+}
 
 /* GIF Banner */
-#gif{
-    display: flex;
-    justify-content: center;
-    }
+#gif {
+  display: flex;
+  justify-content: center;
+}
 
 /* Top Categories */
-.top-categories{
-    display: flex;
-    justify-content: space-evenly;
-    width:1050px;
-    position: relative;
-    left: 229px;
-    font-family: "Lucida Console" , monospace;
-    }
-    
-.categories{
-    border: 2px solid black;
-    border-radius: 4px;
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-    background-color: white;
-    }
+.top-categories {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1050px;
+  position: relative;
+  left: 229px;
+  font-family: "Lucida Console", monospace;
+}
 
-#top{
-    font-size: 20px;
-    background-color: #2de38e;
-    padding: 5px;
-    }
+.categories {
+  border: 2px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.categories:hover {
+  box-shadow: 0px 0px 5px rgba(1, 1, 1, 1);
+  color: white;
+  background-color: black;
+}
+#top {
+  font-size: 20px;
+  background-color: #2de38e;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
 
 /* Color for Used and New */
-.used{
-    color: orangered;
-    font-family: "Lucida Console" , monospace;
-    font-size: 20px;
-    }
+.used {
+  color: orangered;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 6px;
+}
 
-.new{
-    color: green;
-    font-family: "Lucida Console" , monospace;
-    font-size: 20px; 
-    }
+.new {
+  color: green;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.bold-price {
+  padding-left: 17px;
+}
+
+/* All Horizontal Rules */
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
+}
 
 /* First Row */
-.first-row{
-    display: flex;
-    justify-content: center;
-    }
+.first-row {
+  display: flex;
+  justify-content: center;
+}
 
-.first{
-    height: 250px;
-    width: 160px;
-    border: 2px solid black;
-    border-radius: 4px;
-    }
+.first {
+  height: 250px;
+  width: 160px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.first:hover {
+  box-shadow: 0 2px 7px rgba(1, 1, 1, 1);
+  background-color: black;
+}
+
+.first:hover .product-text {
+  color: white;
+}
+
+.first:hover .bold-price {
+  color: white;
+}
 
 /* Hyperlink for all Product Names */
-#iPhone-text{
-    font-size: 17px;
-    font-family: "Lucida Console" , monospace;
-    color: black;
-    text-decoration: none;
-    line-height : 23px;
-    font-weight: bold;
-    }
+.product-text {
+  font-size: 17px;
+  font-family: "Lucida Console", monospace;
+  color: black;
+  text-decoration: none;
+  line-height: 23px;
+  font-weight: bold;
+}
 
 /* All First Row Products */
 
 /* Photo */
-#ip{
-    border-radius: 3px;
-    background-image: url("../images/iPhone13Pro.png");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#ip {
+  border-radius: 3px;
+  background-image: url("../images/iPhone13Pro.png");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
 
+/* Product Name */
+#text-1001 {
+  padding-left: 9px;
+  padding-top: 2px;
+}
 
-#SamsungS23{
-    margin-left: 10px;
-    }
-
-/* Photo */
-#ss23{ 
-    border-radius: 3px;
-    background-image: url("../images/SamsungS23.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#Xiaomi13{
-    margin-left: 10px;
-    }
+#SamsungS23 {
+  margin-left: 10px;
+}
 
 /* Photo */
-#xm13{
-    border-radius: 3px;
-    background-image: url("../images/Xiaomi13.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#ss23 {
+  border-radius: 3px;
+  background-image: url("../images/SamsungS23.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
 
-#Macbook{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1002 {
+  padding-left: 20px;
+  padding-top: 2px;
+}
 
-/* Photo */
-#mbAir{
-    border-radius: 3px;
-    background-image: url("../images/MacbookAir1.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#Aspire5{
-    margin-left: 10px;
-    }
+#Xiaomi13 {
+  margin-left: 10px;
+}
 
 /* Photo */
-#asp5{  
-    border-radius: 3px;
-    background-image: url("../images/acerAspire.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#xm13 {
+  border-radius: 3px;
+  background-image: url("../images/Xiaomi13.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
 
-#Xbox{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1003 {
+  padding-left: 29px;
+  padding-top: 2px;
+}
 
-/* Photo */
-#xb{
-    border-radius: 3px;
-    background-image: url("../images/Xbox.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#PS5{
-    margin-left: 10px;
-    }
+#Macbook {
+  margin-left: 10px;
+}
 
 /* Photo */
-#ps{
-    border-radius: 3px;
-    background-image: url("../images/PS5.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#mbAir {
+  border-radius: 3px;
+  background-image: url("../images/MacbookAir1.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
 
-#beatsHP{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1004 {
+  padding-left: 20px;
+  padding-top: 2px;
+}
+
+#Aspire5 {
+  margin-left: 10px;
+}
 
 /* Photo */
-#beats{
-    border-radius: 3px;
-    background-image: url("../images/beats.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#asp5 {
+  border-radius: 3px;
+  background-image: url("../images/acerAspire.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+/* Product Name */
+#text-1005 {
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+#Xbox {
+  margin-left: 10px;
+}
+
+/* Photo */
+#xb {
+  border-radius: 3px;
+  background-image: url("../images/Xbox.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1006 {
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+#PS5 {
+  margin-left: 10px;
+}
+
+/* Photo */
+#ps {
+  border-radius: 3px;
+  background-image: url("../images/PS5.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1007 {
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+#beatsHP {
+  margin-left: 10px;
+}
+
+/* Photo */
+#beats {
+  border-radius: 3px;
+  background-image: url("../images/beats.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1008 {
+  padding-left: 6.5px;
+  padding-top: 2px;
+}
 
 /* Slider Arrow */
-#rightArrow{
-    background-image: url("../images/arrow1.png");
-    background-size: cover;
-    margin-left: 10px;
-    margin-top: 90px;
-    color: #2de38e;
-    background-color:  #fffdd0;
-    font-size: large;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    }
+#rightArrow {
+  background-image: url("../images/arrow1.png");
+  background-size: cover;
+  margin-left: 10px;
+  margin-top: 90px;
+  color: #2de38e;
+  background-color: white;
+  font-size: large;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+}
 
 #rightArrow:hover {
-    /* border: 2px solid white; */
-    transform: scale(1.1);
-    }
-
-
+  /* border: 2px solid white; */
+  transform: scale(1.1);
+}
 
 /* Second Row */
-.second-row{
-    display: flex;
-    justify-content: center;
-    }
+.second-row {
+  display: flex;
+  justify-content: center;
+}
 
-.second{
-    height: 250px;
-    width: 160px;
-    border: 2px solid black;
-    border-radius: 4px;
-    }
+.second {
+  height: 250px;
+  width: 160px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-/* Hyperlink for all Product Names */
-#iPhone-text{
-    font-size: 17px;
-    font-family: "Lucida Console" , monospace;
-    color: black;
-    text-decoration: none;
-    line-height : 23px;
-    font-weight: bold;
-    }
+.second:hover {
+  box-shadow: 0 2px 7px 0px rgba(1, 1, 1, 1);
+  background-color: black;
+}
+
+.second:hover .product-text {
+  color: white;
+}
+
+.second:hover .bold-price {
+  color: white;
+}
 
 /* All Second Row Products */
 
 /* Photo */
-#jd{
-    border-radius: 3px;
-    background-image: url("../images/JordanC.png");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#jd {
+  border-radius: 3px;
+  background-image: url("../images/JordanC.png");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
 
+/* Product Name */
+#text-1009 {
+  padding-left: 5.5px;
+  padding-top: 2px;
+}
 
-#nike{
-    margin-left: 10px;
-    }
-
-/* Photo */
-#nk{ 
-    border-radius: 3px;
-    background-image: url("../images/ReactPegasus.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#vintage{
-    margin-left: 10px;
-    }
+#nike {
+  margin-left: 10px;
+}
 
 /* Photo */
-#vin{
-    border-radius: 3px;
-    background-image: url("../images/vintageRaketa.png");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#nk {
+  border-radius: 3px;
+  background-image: url("../images/ReactPegasus.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
 
-#diornb{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1010 {
+  padding-left: 23px;
+  padding-top: 2px;
+}
 
-/* Photo */
-#dior{
-    border-radius: 3px;
-    background-image: url("../images/diorNavyBlue.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#rolexAK{
-    margin-left: 10px;
-    }
+#vintage {
+  margin-left: 10px;
+}
 
 /* Photo */
-#rolex{  
-    border-radius: 3px;
-    background-image: url("../images/rolex.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#vin {
+  border-radius: 3px;
+  background-image: url("../images/vintageRaketa.png");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
 
-#adidas{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1011 {
+  padding-left: 6px;
+  padding-top: 2px;
+}
 
-/* Photo */
-#eqt{
-    border-radius: 3px;
-    background-image: url("../images/AdidasE.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
-
-#nikeAF1{
-    margin-left: 10px;
-    }
+#diornb {
+  margin-left: 10px;
+}
 
 /* Photo */
-#nikeaf{
-    border-radius: 3px;
-    background-image: url("../images/NikeAF1.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#dior {
+  border-radius: 3px;
+  background-image: url("../images/diorNavyBlue.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
 
-#luxury{
-    margin-left: 10px;
-    }
+/* Product Name */
+#text-1012 {
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+#rolexAK {
+  margin-left: 10px;
+}
 
 /* Photo */
-#lux{
-    border-radius: 3px;
-    background-image: url("../images/luxury.jpg");
-    background-size: cover;
-    height: 200px;
-    width: 160px;
-    border-bottom: 2px solid black;
-    }
+#rolex {
+  border-radius: 3px;
+  background-image: url("../images/rolex.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1013 {
+  padding-left: 6px;
+  padding-top: 2px;
+}
+
+#adidas {
+  margin-left: 10px;
+}
+
+/* Photo */
+#eqt {
+  border-radius: 3px;
+  background-image: url("../images/AdidasE.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1014 {
+  padding-left: 23px;
+  padding-top: 2px;
+}
+
+#nikeAF1 {
+  margin-left: 10px;
+}
+
+/* Photo */
+#nikeaf {
+  border-radius: 3px;
+  background-image: url("../images/NikeAF1.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1015 {
+  padding-left: 20px;
+  padding-top: 2px;
+}
+
+#luxury {
+  margin-left: 10px;
+}
+
+/* Photo */
+#lux {
+  border-radius: 3px;
+  background-image: url("../images/luxury.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+}
+
+/* Product Name */
+#text-1016 {
+  padding-left: 20px;
+  padding-top: 2px;
+}
