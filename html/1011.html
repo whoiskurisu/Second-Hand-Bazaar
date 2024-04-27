@@ -3,19 +3,25 @@
     <title>Vintage Raketa</title>
     <link rel="stylesheet" href="../css/1011.css">
 </head>
-<body background="">
-     <!-- Nav Bar -->
-  <header>  
-    <div id="container">
-      <a href="index.html" id="logo">2ndHB</a> 
-      <a href="myCart.html" id="myCart" class="border">My Cart</a>
-      <a href="contact.html" id="contact" class="border">Contact Us</a>
-      <a href="log-in.html" id="log-in" class="border">Log In</a>
-      <a href="sign-up.html" id="sign-up" class="border">Sign Up</a>
-      <input id="inp" type="text" placeholder="Search 2ndHB's Products">
-      <button id="but">Search</button>
-    </div>
-   </header>
+<body class= "body">
+      <!-- Nav Bar -->
+    <header id="header">
+      <div id="container">
+        <a href="index.html" id="logo">2ndHB</a>
+        <span id="span">|</span>
+        <a href="myCart.html" id="myCart" class="nav">My Cart</a>
+        <a href="contact.html" id="contact" class="nav">Contact Us</a>
+        <a href="log-in.html" id="log-in" class="nav">Log In</a>
+        <a href="sign-up.html" id="sign-up" class="nav">Sign Up</a>
+      </div>
+      <div id="container2">
+        <input id="inp" type="text" placeholder="Search 2ndHB's Products" />
+        <button id="but"><ion-icon name="search-outline"></ion-icon></button>
+      </div>
+    </header>
+
+    <br />
+    <hr class="hori-rule" />
    
    <!-- Product Heading -->
    <div id="product-heading">Vintage Raketa</div>
@@ -50,7 +56,7 @@
        <div id="quantity">Quantity</div>
         <div id="quantity-value">
          <button id="quantity-minus"></button>
-         <input id="quantity-input" placeholder="0"></input>
+         <input id="quantity-input" value="0" type="number"></input>
          <button id="quantity-plus"></button>
         </div>
 
@@ -152,5 +158,14 @@
   
   <!-- JavaScript -->
   <script src="../js/ratingFunction.js" type="text/javascript"></script>
+  <script src="../js/quantityFunction.js" type="text/javascript"></script>    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
 </body>
 </html>

@@ -5,67 +5,82 @@
 }
 
 .body {
-  /* background-image: url("../images/blur.jpg"); */
+  background-image: url("../images/1.jpg");
   background-size: cover;
 }
 
 /* Nav Bar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin-bottom: -15px;
+  width: 89.3%;
+  margin-left: 50px;
+}
+
 #container {
-  background-color: black;
-  height: 50px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 700px;
+  height: 45px;
 }
 
 #logo {
   font-family: "Lucida Handwriting", cursive;
-  margin-top: 5.5px;
   font-size: 30px;
   color: #2de38e;
   text-decoration: none;
-  height: 37px;
-  width: 90px;
 }
 
-#myCart {
+#span {
   color: white;
-  padding-top: 16px;
+  font-family: "Lucida console", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.nav {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+  color: white;
   text-decoration: none;
   font-size: 19px;
 }
 
-#contact {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
+.nav:hover {
+  transform: scale(1.1);
 }
 
-#log-in {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
-}
-
-#sign-up {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
 }
 
 #inp {
-  height: 30px;
-  width: 190px;
-  position: relative;
-  top: 10px;
+  height: 35px;
+  width: 330px;
+  background: transparent;
   border-radius: 4px;
-  border: none;
   font-family: "Lucida Console", monospace;
-  padding-left: 3px;
+  font-size: 17px;
+  color: black;
+  padding-left: 10px;
   padding-top: 3px;
-  font-size: 13px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 #inp:focus::placeholder {
@@ -73,34 +88,23 @@
 }
 
 #but {
-  height: 30px;
-  width: 50px;
-  position: relative;
-  top: 10px;
-  margin-left: -135px;
+  height: 35px;
+  width: 45px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
   background-color: #2de38e;
-  font-family: monaco, monospace;
+  font-size: 23px;
+  color: white;
+  font-family: "Lucida Console", monospace;
+  font-weight: 700;
   border-radius: 4px;
   border: none;
   align-items: center;
   cursor: pointer;
 }
 
-.border {
-  font-family: "Lucida console", monospace;
-  transition: 0.3s;
-  font-weight: 700;
-}
-
-.border:hover {
-  /* border: 2px solid white; */
-  transform: scale(1.1);
-}
-
-/* GIF Banner */
-#gif {
-  display: flex;
-  justify-content: center;
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
 }
 
 /* Top Categories */
@@ -128,6 +132,7 @@
   color: white;
   background-color: black;
 }
+
 #top {
   font-size: 20px;
   background-color: #2de38e;
@@ -362,23 +367,24 @@
 }
 
 /* Slider Arrow */
+
 #rightArrow {
-  background-image: url("../images/arrow1.png");
-  background-size: cover;
   margin-left: 10px;
   margin-top: 90px;
-  color: #2de38e;
-  background-color: white;
-  font-size: large;
+  background-color: transparent;
+  color: #1f2937;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: none;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 #rightArrow:hover {
-  /* border: 2px solid white; */
-  transform: scale(1.1);
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 7px 0px rgba(1, 1, 1, 1);
 }
 
 /* Second Row */

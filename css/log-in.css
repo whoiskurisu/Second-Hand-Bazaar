@@ -4,63 +4,83 @@
   border: border-box;
 }
 
+#body {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
 /* Nav Bar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin-bottom: -15px;
+  width: 89.3%;
+  margin-left: 50px;
+}
+
 #container {
-  background-color: #0f1111;
-  height: 50px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 700px;
+  height: 45px;
 }
 
 #logo {
   font-family: "Lucida Handwriting", cursive;
-  margin-top: 5.5px;
   font-size: 30px;
   color: #2de38e;
   text-decoration: none;
-  height: 37px;
-  width: 90px;
 }
 
-#myCart {
+#span {
   color: white;
-  padding-top: 16px;
+  font-family: "Lucida console", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.nav {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+  color: white;
   text-decoration: none;
   font-size: 19px;
 }
 
-#contact {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
+.nav:hover {
+  transform: scale(1.1);
 }
 
-#log-in {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
-}
-
-#sign-up {
-  color: white;
-  padding-top: 16px;
-  text-decoration: none;
-  font-size: 19px;
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
 }
 
 #inp {
-  height: 30px;
-  width: 190px;
-  position: relative;
-  top: 10px;
+  height: 35px;
+  width: 330px;
+  background: transparent;
   border-radius: 4px;
-  border: none;
   font-family: "Lucida Console", monospace;
-  padding-left: 3px;
+  font-size: 17px;
+  color: black;
+  padding-left: 10px;
   padding-top: 3px;
-  font-size: 13px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
 #inp:focus::placeholder {
@@ -68,34 +88,30 @@
 }
 
 #but {
-  height: 30px;
-  width: 50px;
-  position: relative;
-  top: 10px;
-  margin-left: -135px;
+  height: 35px;
+  width: 45px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
   background-color: #2de38e;
-  font-family: monaco, monospace;
+  font-size: 23px;
+  color: white;
+  font-family: "Lucida Console", monospace;
+  font-weight: 700;
   border-radius: 4px;
   border: none;
   align-items: center;
   cursor: pointer;
 }
 
-.border {
-  font-family: "Lucida console", monospace;
-  transition: 0.3s;
-  font-weight: 700;
-}
-
-.border:hover {
-  transform: scale(1.1);
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
 }
 
 /* Login */
 
 .log-in-container {
   position: relative;
-  top: 110px;
+  top: 100px;
   left: 500px;
   border: 2px solid #0f1111;
   border-radius: 10px;
@@ -134,6 +150,9 @@
   font-family: "Courier New", monospace;
   padding: 3px;
   border: 2px solid black;
+  /* border-right: transparent; */
+  border-left: transparent;
+  border-top: transparent;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -166,7 +185,7 @@
 }
 
 .email-pwd input {
-  width: 90%;
+  width: 89.3%;
   height: 35px;
   background-color: transparent;
   border: none;
@@ -234,7 +253,7 @@
 }
 
 .or-heading span {
-  background: #fff;
+  background: #ebebeb;
   padding: 0 10px;
   font-weight: 100;
 }
