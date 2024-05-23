@@ -1,0 +1,19 @@
+{
+  "name": "second-hand-bazaar",
+  "version": "1.0.0",
+  "description": "<br>\r 2ndHB is an online second-hand store made with plain CSS and vanilla JS.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}

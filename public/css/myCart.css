@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: border-box;
+}
+
+.body {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
+/* Nav Bar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin-bottom: -15px;
+  width: 89.3%;
+  margin-left: 50px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 700px;
+  height: 45px;
+}
+
+#logo {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 30px;
+  color: #2de38e;
+  text-decoration: none;
+}
+
+#span {
+  color: white;
+  font-family: "Lucida console", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.nav {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.nav:hover {
+  transform: scale(1.1);
+}
+
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+#inp {
+  height: 35px;
+  width: 330px;
+  background: transparent;
+  border-radius: 4px;
+  font-family: "Lucida Console", monospace;
+  font-size: 17px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 3px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+#inp:focus::placeholder {
+  color: transparent;
+}
+
+#but {
+  height: 35px;
+  width: 45px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+  background-color: #2de38e;
+  font-size: 23px;
+  color: white;
+  font-family: "Lucida Console", monospace;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
+}
+
+/* Cart */
+#cart-title {
+  height: 50px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 15px;
+  font-size: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#cart-container {
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 50px;
+  height: 1000px;
+  width: 1370px;
+}
+
+.cart-items {
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 675px;
+  height: 300px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.item-image {
+  height: 280px;
+  width: 225px;
+  margin-left: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.item-details {
+  height: 290px;
+  width: 325px;
+  margin-left: 5px;
+  /* border: 1px solid black; */
+  border-radius: 3px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Lucida console", monospace;
+}

@@ -1,0 +1,522 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: border-box;
+}
+
+.body {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
+/* Nav Bar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin-bottom: -15px;
+  width: 89.3%;
+  margin-left: 50px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: #262628;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 700px;
+  height: 45px;
+}
+
+#logo {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 30px;
+  color: #2de38e;
+  text-decoration: none;
+}
+
+#span {
+  color: white;
+  font-family: "Lucida console", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.nav {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.nav:hover {
+  transform: scale(1.1);
+}
+
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+#inp {
+  height: 35px;
+  width: 330px;
+  background: transparent;
+  border-radius: 4px;
+  font-family: "Lucida Console", monospace;
+  font-size: 17px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 3px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+#inp:focus::placeholder {
+  color: transparent;
+}
+
+#but {
+  height: 35px;
+  width: 45px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+  background-color: #2de38e;
+  font-size: 23px;
+  color: white;
+  font-family: "Lucida Console", monospace;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
+}
+
+/* Top Categories */
+.top-categories {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1050px;
+  position: relative;
+  left: 229px;
+  font-family: "Lucida Console", monospace;
+}
+
+.categories {
+  border: 2px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.categories:hover {
+  box-shadow: 0px 0px 5px rgba(1, 1, 1, 1);
+  color: white;
+  background-color: #262628;
+}
+
+#top {
+  font-size: 20px;
+  background-color: #2de38e;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+/* All Horizontal Rules */
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
+}
+
+/* First Row */
+.first-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Second Row */
+.second-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-box {
+  height: 250px;
+  width: 160px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-box:hover {
+  box-shadow: 0 2px 7px rgba(1, 1, 1, 1);
+  background-color: #1d1d1e;
+}
+
+.product-box:hover .product-text {
+  color: white;
+}
+
+.product-box:hover .price {
+  color: white;
+}
+
+/* Photo */
+.first-row-image {
+  border-radius: 3px;
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.second-row-image {
+  border-radius: 3px;
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+/* Product Text */
+.product-text {
+  font-size: 17px;
+  font-family: "Lucida Console", monospace;
+  color: black;
+  text-decoration: none;
+  line-height: 23px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Product Status */
+.used {
+  color: orangered;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 6px;
+}
+
+.new {
+  color: green;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* Product Price */
+.price {
+  padding-left: 17px;
+  letter-spacing: 0.5px;
+}
+
+/* Slider Arrow */
+#rightArrow {
+  margin-left: 10px;
+  margin-top: 90px;
+  background-color: transparent;
+  color: #1f2937;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#rightArrow:hover {
+  background-color: #1d1d1e;
+  color: white;
+  box-shadow: 0 2px 7px 0px rgba(1, 1, 1, 1);
+}
+
+/* Info Box */
+#info-container {
+  display: flex;
+  gap: 20px;
+  /* justify-content: center; */
+  align-items: center;
+
+  background-color: rgba(1, 1, 1, 1);
+  /* background-image: url("/images/maths.jpg");
+  background-size: cover; */
+  padding: 35px;
+  width: 87%;
+  border-radius: 10px;
+  margin-left: 45px;
+  margin-bottom: 55px;
+}
+
+#photo-box {
+  /* border: solid 1px white; */
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  /* box-shadow: 1px 1px 10px white; */
+  background-image: url("../images/2HBshop.jpg");
+  background-size: cover;
+}
+
+#text-box {
+  border: solid 1px black;
+  /* height: 450px; */
+  width: 550px;
+}
+
+#text-box #title {
+  background-color: white;
+  color: black;
+  font-family: "Lucida console", monospace;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 5px;
+
+  width: 500px;
+  height: 32px;
+  text-align: center;
+}
+
+#text-box #description {
+  background-color: black;
+  padding: 10px;
+  font-family: "Courier New", monospace;
+
+  color: white;
+  font-size: 25px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#info-hr {
+  width: 550px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Gap */
+.categories-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #262628;
+
+  padding: 35px;
+  width: 87%;
+  height: 650px;
+
+  border-radius: 10px;
+  margin-left: 45px;
+  margin-bottom: 55px;
+}
+
+#categories-list {
+  color: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: 15px;
+  background-color: #262628;
+  height: 600px;
+  width: 500px;
+  padding-left: 50px;
+}
+
+.categories-class-title {
+  display: flex;
+  font-size: 23px;
+  font-family: "Lucida console", monospace;
+
+  font-weight: 500;
+  align-items: center;
+}
+
+.categories-title {
+  color: #dddddd;
+  width: 405px;
+  height: 39px;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.categories-title-icon {
+  font-size: 30px;
+  margin-top: 2.5px;
+}
+
+.categories-class {
+  width: 79%;
+  height: 39px;
+  border-bottom: 1px solid #dddddd;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: "Lucida console", monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 10px;
+}
+
+.arrowSeparate {
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.categories-icon {
+  font-size: 25px;
+  margin-top: -3px;
+}
+
+#avatar {
+  background-image: url("../images/avatar.jpg");
+  background-size: cover;
+  height: 650px;
+  width: 400px;
+}
+
+/* Footer */
+
+#back-to-top {
+  background-color: #1f2937;
+  color: white;
+  height: 27px;
+  width: 100%;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 22px;
+  font-family: "Lucida console", monospace;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#footer-content {
+  background-color: #131a22;
+  height: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rows {
+  /* background-color: gray; */
+  height: 200px;
+  width: 220px;
+  margin-top: 70px;
+  /* text-align: center; */
+  color: white;
+
+  font-family: Arial, sans-serif;
+  /* letter-spacing: 0.9px; */
+}
+
+.row-title {
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.row-ul {
+  color: #dddddd;
+  margin-top: 17px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.row-ul li {
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.row-ul li:hover {
+  text-decoration: underline;
+}
+
+.conversion-div {
+  height: 70px;
+  background-color: #131a22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0.8px;
+}
+
+#footer-logo {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 37px;
+  color: #2de38e;
+  text-decoration: none;
+}
+
+#conversions {
+  display: flex;
+  gap: 10px;
+}
+
+.conv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #131a22;
+  color: white;
+  height: 30px;
+  width: 150px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.conv select {
+  background-color: #131a22;
+  color: white;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.conv .global {
+  font-size: 19px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #1d1d1e;
+  font-size: 13px;
+  font-family: Helvetica, sans-serif;
+  height: 27px;
+  letter-spacing: 1px;
+}

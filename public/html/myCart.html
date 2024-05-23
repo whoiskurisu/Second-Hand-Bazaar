@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>My Cart</title>
+    <link rel="stylesheet" href="../css/myCart.css" />
+  </head>
+  <body id="cart-body">
+    <!-- Nav Bar -->
+    <header id="header">
+      <div id="container">
+        <a href="/" id="logo">2ndHB</a>
+        <span id="span">|</span>
+        <a href="/cart" id="myCart" class="nav">My Cart</a>
+        <a href="/contact" id="contact" class="nav">Contact Us</a>
+        <a href="/login" id="log-in" class="nav">Log In</a>
+        <a href="/signup" id="sign-up" class="nav">Sign Up</a>
+      </div>
+      <div id="container2">
+        <input id="inp" type="text" placeholder="Search 2ndHB's Products" />
+        <button id="but"><ion-icon name="search-outline"></ion-icon></button>
+      </div>
+    </header>
+
+    <br />
+    <hr class="hori-rule" />
+
+    <!-- Cart Container -->
+    <div id="cart-title">Your Cart</div>
+    <div id="cart-container">
+      <div id="first-item" class="cart-items">
+        <div class="item-image"></div>
+        <div class="item-details">
+          <div class="item-name">Name : <span id="item-name-value"></span></div>
+          <div class="item-price">
+            Price : <span id="item-price-value"></span>
+          </div>
+          <div class="item-color">
+            Color : <span id="item-color-value"></span>
+          </div>
+          <div class="item-quantity">
+            Quantity : <span id="item-quantity-value"></span>
+          </div>
+        </div>
+      </div>
+      <div id="first-item" class="cart-items"></div>
+    </div>
+    <script src="../js/cartFunction.js" type="text/javascript"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
