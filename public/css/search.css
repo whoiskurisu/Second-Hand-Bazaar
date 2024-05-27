@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: border-box;
+}
+
+.body {
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
+/* Nav Bar */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  margin-bottom: -15px;
+  width: 89.3%;
+  margin-left: 50px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: #262628;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 700px;
+  height: 45px;
+}
+
+#logo {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 30px;
+  color: #2de38e;
+  text-decoration: none;
+}
+
+#span {
+  color: white;
+  font-family: "Lucida console", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.nav {
+  font-family: "Lucida console", monospace;
+  transition: 0.3s;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+.nav:hover {
+  transform: scale(1.1);
+}
+
+#container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+#inp {
+  height: 35px;
+  width: 330px;
+  background: transparent;
+  border-radius: 4px;
+  font-family: "Lucida Console", monospace;
+  font-size: 17px;
+  color: black;
+  padding-left: 10px;
+  padding-top: 3px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+#inp:focus::placeholder {
+  color: transparent;
+}
+
+#but {
+  height: 35px;
+  width: 45px;
+  box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+  background-color: #2de38e;
+  font-size: 23px;
+  color: white;
+  font-family: "Lucida Console", monospace;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hori-rule {
+  width: 1370px;
+  margin-left: 52px;
+}
+
+#searchDesc {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Lucida console", monospace;
+}
+
+.searchContainer {
+  margin-top: 15px;
+  margin-left: 40px;
+  width: 92%;
+  /* height: 1000px; */
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.product-box {
+  height: 250px;
+  width: 160px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-box:hover {
+  box-shadow: 0 2px 7px rgba(1, 1, 1, 1);
+  background-color: #1d1d1e;
+}
+
+.product-box:hover .product-text {
+  color: white;
+}
+
+.product-box:hover .price {
+  color: white;
+}
+
+.image {
+  border-radius: 3px;
+  background-size: cover;
+  height: 200px;
+  width: 160px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.product-text {
+  font-size: 17px;
+  font-family: "Lucida Console", monospace;
+  color: black;
+  text-decoration: none;
+  line-height: 23px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Product Status */
+.used {
+  color: orangered;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 6px;
+}
+
+.new {
+  color: green;
+  font-family: "Lucida Console", monospace;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* Product Price */
+.price {
+  padding-left: 17px;
+  letter-spacing: 0.5px;
+}

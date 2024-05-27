@@ -25,6 +25,7 @@ async function fetchData() {
 
       const image = document.querySelector(".first-row-image");
       image.style.backgroundImage = `${Itemdata[i].image}`;
+      console.log(image.style.backgroundImage);
     }
 
     // For Second Row
@@ -39,7 +40,9 @@ async function fetchData() {
 
       x.innerHTML = `<div class="second-row-image"></div>
         <div class="product-text">${Itemdata[i].name}</div>
-          <b class="used">${Itemdata[i].status.toUpperCase()}</b>
+          <b class="${Itemdata[i].status}">${Itemdata[
+        i
+      ].status.toUpperCase()}</b>
           <b class="price">रू. ${Itemdata[i].price}</b>`;
 
       const image = document.querySelector(".second-row-image");

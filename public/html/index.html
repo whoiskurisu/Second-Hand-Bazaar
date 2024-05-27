@@ -15,19 +15,21 @@
         <a href="/login" id="log-in" class="nav">Log In</a>
         <a href="/signup" id="sign-up" class="nav">Sign Up</a>
       </div>
-      <div id="container2">
-        <form action="/search" method="POST">
+      <form action="/search" method="get">
+        <div id="container2">
           <input
             name="product"
             id="inp"
             type="text"
             placeholder="Search 2ndHB's Products"
+            onkeydown=""
           />
-        </form>
-        <button id="but">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
-      </div>
+
+          <button id="but" type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </form>
     </header>
 
     <br />

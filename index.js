@@ -145,3 +145,8 @@ app.get("/api/products", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Website is live at http://localhost:${PORT}`);
 });
+
+// Search functionality
+app.get("/search", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./public/html/search.html"));
+});
