@@ -38,9 +38,12 @@ async function fetchData() {
         x.innerHTML = `<div class='image' style="background-image:${
           Itemdata[i].image
         };"></div>
-      <div class="product-text">${Itemdata[i].name}</div>
-        <b class="${Itemdata[i].status}">${Itemdata[i].status.toUpperCase()}</b>
-        <b class="price">रू. ${Itemdata[i].price}</b>`;
+        <div class="product-text">${Itemdata[i].name}</div>
+        <div class='product-text-bottom'>
+          <b class="${Itemdata[i].status}">${Itemdata[
+          i
+        ].status.toUpperCase()}</b>
+          <b class="price">रू. ${Itemdata[i].price}</b></div>`;
       }
     }
   } catch (error) {

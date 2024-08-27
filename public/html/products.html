@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>iPhone 13 Pro</title>
+        <title id="title"></title>
         <link rel="stylesheet" href="../css/products.css">
     </head>
     <body class= "body">
@@ -14,10 +14,21 @@
         <a href="/login" id="log-in" class="nav">Log In</a>
         <a href="/signup" id="sign-up" class="nav">Sign Up</a>
       </div>
-      <div id="container2">
-        <input id="inp" type="text" placeholder="Search 2ndHB's Products" />
-        <button id="but"><ion-icon name="search-outline"></ion-icon></button>
-      </div>
+      <form action="/search" method="get">
+        <div id="container2">
+          <input
+            name="product"
+            id="inp"
+            type="text"
+            placeholder="Search 2ndHB's Products"
+            onkeydown=""
+          />
+
+          <button id="but" type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </form>
     </header>
 
     <br />

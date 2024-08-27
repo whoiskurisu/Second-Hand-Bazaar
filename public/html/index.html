@@ -253,7 +253,7 @@
 
     <!-- Footer -->
     <footer>
-      <div id="back-to-top" onclick="location.href='#'">Back To Top</div>
+      <div id="back-to-top" onclick="topFunction()">Back To Top</div>
 
       <div id="footer-content">
         <div id="row1" class="rows">
@@ -305,9 +305,9 @@
           </div>
           <div id="currency" class="conv">
             <ion-icon name="cash-outline" class="global"></ion-icon>
-            <select>
-              <option value="Dollars">USD - $</option>
+            <select class="selectBox" onchange="dollarChange(value)">
               <option value="NPR">NPR - रु</option>
+              <option value="Dollars">USD - $</option>
               <option value="INR">INR - ₹</option>
             </select>
           </div>

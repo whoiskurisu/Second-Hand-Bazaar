@@ -24,7 +24,7 @@ const path = require("path");
 const app = express();
 const PORT = 5000;
 
-// app.use(express.json());
+app.use(express.json()); // To parse the data in req.body so that we can access it in json
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "./public"))); // So that we dont need to readFile for every respective css, js and images
 
@@ -88,25 +88,27 @@ app.get("/cart", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public/html/myCart.html"));
 });
 
-// Cart API
-app.get("/api/cart", async (req, res) => {
-  const myData = await cartCollection.find(req.query);
-  res.json(myData);
-});
-
 // Add to Cart functionality
 const { cartCollection } = require("./mongodb");
 
 app.post("/cart", async (req, res) => {
-  const data = {
-    color: req.body.color,
-    quantity: req.body.quantity,
-    address: req.body.address,
-    district: req.body.district,
-  };
+  const data = req.body;
+  data.id = req.get("Referer").slice(-4);
 
-  await cartCollection.insertMany([data]);
-  res.send("Cart");
+  await cartCollection.create(data);
+  res.sendFile(path.resolve(__dirname, "./public/html/myCart.html"));
+});
+
+// Delete from cart
+app.patch("/cart", async (req, res) => {
+  await cartCollection.deleteMany(req.body);
+  res.status(201);
+});
+
+// Cart API
+app.get("/api/cart", async (req, res) => {
+  const myData = await cartCollection.find(req.query); // req.query helps to filter the products that we search in url
+  res.json(myData);
 });
 
 // Wishlist Page
@@ -114,17 +116,12 @@ app.get("/wishlist", (req, res) => {
   // res.sendFile(path.resolve(__dirname, "./public/html/wishlist.html"));
 });
 
-// Wishlist API
-app.get("/api/wishlist", async (req, res) => {
-  const myData = await wishlistCollection.find(req.query);
-  res.json(myData);
-});
-
 // Add to Wishlist functionality
 const { wishlistCollection } = require("./mongodb");
 
 app.post("/wishlist", async (req, res) => {
   const data = {
+    id: req.get("Referer").slice(-4),
     color: req.body.color,
     quantity: req.body.quantity,
     address: req.body.address,
@@ -135,6 +132,19 @@ app.post("/wishlist", async (req, res) => {
   res.send("Wishlist");
 });
 
+// Delete from wishlist
+app.patch("/wishlist", async (req, res) => {
+  let productId = req.body.id;
+  await wishlistCollection.deleteMany({ id: productId });
+  res.status(201);
+});
+
+// Wishlist API
+app.get("/api/wishlist", async (req, res) => {
+  const myData = await wishlistCollection.find(req.query);
+  res.json(myData);
+});
+
 // Products API
 const products = require("./data");
 
@@ -142,11 +152,11 @@ app.get("/api/products", (req, res) => {
   res.json(products);
 });
 
-app.listen(PORT, () => {
-  console.log(`Website is live at http://localhost:${PORT}`);
-});
-
 // Search functionality
 app.get("/search", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./public/html/search.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Website is live at http://localhost:${PORT}`);
 });

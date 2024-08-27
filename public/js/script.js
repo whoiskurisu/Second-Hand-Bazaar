@@ -18,14 +18,13 @@ async function fetchData() {
       x.setAttribute("class", "product-box");
       x.setAttribute("onclick", `location.href='/products/${Itemdata[i].id}'`);
 
-      x.innerHTML = `<div class="first-row-image"></div>
+      x.innerHTML = `<div class="first-row-image" style="background-image:${
+        Itemdata[i].image
+      };"></div>
       <div class="product-text">${Itemdata[i].name}</div>
+      <div class='product-text-bottom'>
         <b class="${Itemdata[i].status}">${Itemdata[i].status.toUpperCase()}</b>
-        <b class="price">रू. ${Itemdata[i].price}</b>`;
-
-      const image = document.querySelector(".first-row-image");
-      image.style.backgroundImage = `${Itemdata[i].image}`;
-      console.log(image.style.backgroundImage);
+        <b class="price">रू. ${Itemdata[i].price}</b></div>`;
     }
 
     // For Second Row
@@ -38,15 +37,13 @@ async function fetchData() {
       x.setAttribute("class", "product-box");
       x.setAttribute("onclick", `location.href='/products/${Itemdata[i].id}'`);
 
-      x.innerHTML = `<div class="second-row-image"></div>
+      x.innerHTML = `<div class="second-row-image" style="background-image:${
+        Itemdata[i].image
+      };"></div>
         <div class="product-text">${Itemdata[i].name}</div>
-          <b class="${Itemdata[i].status}">${Itemdata[
-        i
-      ].status.toUpperCase()}</b>
-          <b class="price">रू. ${Itemdata[i].price}</b>`;
-
-      const image = document.querySelector(".second-row-image");
-      image.style.backgroundImage = `${Itemdata[i].image}`;
+        <div class='product-text-bottom'>
+        <b class="${Itemdata[i].status}">${Itemdata[i].status.toUpperCase()}</b>
+        <b class="price">रू. ${Itemdata[i].price}</b></div>`;
     }
   } catch (error) {
     console.error(error);
@@ -54,3 +51,26 @@ async function fetchData() {
 }
 
 fetchData();
+const currentPrice = document.querySelector(".price");
+console.log(currentPrice);
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// function dollarChange(currentValue) {
+//   console.log(currentPrice);
+//   // if (currentValue == Dollars) {
+//   //   currentPrice = new Intl.NumberFormat("en-US", {
+//   //     style: "currency",
+//   //     currency: "USD",
+//   //   });
+//   // }
+//   // if(currentValue == NPR){}
+//   // if(currentValue == INR){}
+
+//   console.log(currentValue);
+//   // let currentPrice = document.querySelector(".price");
+//   // currentPrice = currentPrice * 0.0075;
+//   // console.log(currentPrice);
+// }

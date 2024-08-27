@@ -175,18 +175,23 @@
   color: orangered;
   font-family: "Lucida Console", monospace;
   font-size: 20px;
-  padding-left: 6px;
+  /* padding-left: 6px; */
 }
 
 .new {
   color: green;
   font-family: "Lucida Console", monospace;
   font-size: 20px;
-  padding-left: 10px;
 }
 
 /* Product Price */
 .price {
-  padding-left: 17px;
   letter-spacing: 0.5px;
+  margin-top: -1.5px;
+}
+
+/* Status and Price spacing */
+.product-text-bottom {
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -16,18 +16,22 @@ const signupSchema = new mongoose.Schema({
   FirstName: {
     type: String,
     required: true,
+    trim: true,
   },
   LastName: {
     type: String,
     required: true,
+    trim: true,
   },
   Email: {
     type: String,
     required: true,
+    trim: true,
   },
   Password: {
     type: String,
     required: true,
+    trim: true,
   },
 });
 
@@ -38,21 +42,30 @@ const authCollection = new mongoose.model("signup-datas", signupSchema);
 // Schema for cart and wishlist
 
 const cart_wlSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+    trim: true,
+  },
   color: {
     type: String,
     required: true,
+    trim: true,
   },
   quantity: {
     type: String,
     required: true,
+    trim: true,
   },
   address: {
     type: String,
     required: true,
+    trim: true,
   },
   district: {
     type: String,
     required: true,
+    trim: true,
   },
 });
 

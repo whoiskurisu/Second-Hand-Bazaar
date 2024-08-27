@@ -11,6 +11,8 @@ async function fetchData() {
 
     const JSONofProduct = Itemdata.find((x) => x.id == productID);
 
+    const title = document.querySelector("#title");
+    title.textContent = JSONofProduct.name;
     const heading = document.querySelector("#product-heading");
     const status = document.querySelector("#status");
     const image = document.querySelector("#image");
@@ -21,26 +23,33 @@ async function fetchData() {
     status.setAttribute("class", JSONofProduct.status);
     image.style.backgroundImage = JSONofProduct.image;
     price.textContent = "रू." + JSONofProduct.price;
-
-    //   for (let i = 8; i <= 15; i++) {
-    //     const x = document.createElement("div");
-    //     const contain = document.querySelector(".second-row");
-
-    //     contain.prepend(x);
-    //     x.setAttribute("class", "product-box");
-    //     x.setAttribute("onclick", `location.href='/products/${Itemdata[i].id}'`);
-
-    //     x.innerHTML = `<div class="second-row-image"></div>
-    //       <div class="product-text">${Itemdata[i].name}</div>
-    //         <b class="used">${Itemdata[i].status.toUpperCase()}</b>
-    //         <b class="price">रू. ${Itemdata[i].price}</b>`;
-
-    //     const image = document.querySelector(".second-row-image");
-    //     image.style.backgroundImage = `${Itemdata[i].image}`;
-    //   }
   } catch (error) {
     console.error(error);
   }
 }
 
 fetchData();
+
+// async function postData(){
+// try {
+//   const btn = document.querySelector('#addToCart')
+//   btn.addEventListener('onclick',()=>{
+
+//   })
+// } catch (error) {
+//   console.log(error)
+// }
+// }
+
+fetch("http://localhost:5000/", {
+  method: "POST",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify({ name: "kurisu" }),
+})
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.log("ERROR"));
