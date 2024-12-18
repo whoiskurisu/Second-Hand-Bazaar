@@ -1,7 +1,7 @@
 async function fetchData() {
   try {
-    const cartValue = await fetch(`http://localhost:5000/api/cart`);
-    const productValue = await fetch(`http://localhost:5000/api/products`);
+    const cartValue = await fetch(`http://localhost:5000/api/v1/cart`); 
+    const productValue = await fetch(`http://localhost:5000/api/v1/products`);
 
     const cartData = await cartValue.json();
     const producData = await productValue.json();
@@ -37,7 +37,7 @@ async function fetchData() {
           }">${JSONofProduct.status.toUpperCase()}</span>
         </div>
         <span class="icon-close" onclick="
-          removeFn('${JSONofProduct.id}','${JSONofProduct.name}')
+          removeFn('${cartData[i]._id}')
 
         "><ion-icon name="trash-bin-outline"></ion-icon></span>
       </div>`;
@@ -49,20 +49,11 @@ async function fetchData() {
 
 fetchData();
 
-async function removeFn(x, y) {
-  const container = document.querySelectorAll(".cart-items");
-
-  for (let i = 0; i < container.length; i++) {
-    if (container[i].textContent.includes(y)) {
-      container[i].remove();
-    }
-  }
-
+async function removeFn(x) {
   try {
-    await axios.patch("/cart", {
-      id: x,
-    });
+    location.reload();
+    await axios.delete(`/api/v1/cart/${x}`);
   } catch (error) {
     console.log("Error");
-  }
+  } 
 }

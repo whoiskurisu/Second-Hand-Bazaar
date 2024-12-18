@@ -1,0 +1,100 @@
+<html>
+
+<head>
+  <title>Add Product</title>
+  <link rel="stylesheet" href="../css/addProduct.css" />
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <header id="header">
+    <div id="container">
+      <a href="/" id="logo">2ndHB</a>
+      <span id="span">|</span>
+      <a href="/cart" id="myCart" class="nav">My Cart</a>
+      <a href="/contact" id="contact" class="nav">Contact Us</a>
+      <a href="/login" id="log-in" class="nav">Log In</a>
+      <a href="/signup" id="sign-up" class="nav">Sign Up</a>
+    </div>
+    <form action="/search" method="get">
+      <div id="container2">
+        <input name="product" id="inp" type="text" placeholder="Search 2ndHB's Products" onkeydown="" />
+
+        <button id="but" type="submit">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+    </form>
+  </header>
+
+  <br />
+  <hr class="hori-rule1" />
+
+  <!-- Add Product Container -->
+  <div class="addProduct-container">
+    <h2 id="addProduct-title">Add Product</h2>
+
+    <form id="form" method="post" action="">
+      <!-- Name -->
+      <div id="nameDiv" class="addProduct">
+        <div id="nameDiv" class="addProductDiv">Name</div>
+        <input required id="name" />
+      </div>
+
+
+      <!-- Status -->
+      <div id="nameDiv" class="addProduct">
+        <div id="statusDiv" class="addProductDiv">Status</div>
+        <select id="status">
+          <option value="USED">USED</option>
+          <option value="NEW">NEW</option>
+        </select>
+      </div>
+
+
+      <!-- Price -->
+      <div id="nameDiv" class="addProduct">
+        <div id="priceDiv" class="addProductDiv">Price</div>
+        <input required id="price" />
+      </div>
+
+
+      <!-- Color -->
+      <div id="nameDiv" class="addProduct">
+        <div id="colorDiv" class="addProductDiv">Color</div>
+        <input required id="color" />
+      </div>
+
+
+      <!-- Quantity -->
+      <div id="nameDiv" class="addProduct">
+        <div id="quantityDiv" class="addProductDiv">Quantity</div>
+        <div id="quantity-value">
+          <button id="quantity-minus" type="button"></button>
+          <input id="quantity-input" value="0" type="number" name="quantity" required></input>
+          <button id="quantity-plus" type="button"></button>
+        </div>
+      </div>
+
+
+      <!-- Image -->
+      <div id="nameDiv" class="addProduct">
+        <div id="imageDiv" class="addProductDiv">Image</div>
+        <input type="file" name="image" id="image">
+      </div>
+
+      <button type="submit" class="btn" id="addProductBtn">
+        <h5>Add Product</h5>
+      </button>
+    </form>
+  </div>
+
+  <!-- Javascript -->
+  <script src="../js/addProduct.js"></script>
+  <script src="../js/quantityFunction.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

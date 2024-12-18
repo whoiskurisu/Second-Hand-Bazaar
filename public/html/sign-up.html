@@ -38,26 +38,24 @@
     <div class="sign-up-container">
       <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
 
-      
         <h2 id="sign-up-title">Sign up</h2>
 
-        <form action="/signup" method="post">
+        <form id="form">
         <div class="email-pwd" id="name">
-          <input required name="fname" />
+          <input required id="fname" />
           <label>First Name</label>
         </div>
         <div class="email-pwd" id="name">
-          <input required name="lname" />
+          <input required id="lname" />
           <label>Last Name</label>
         </div>
         <div class="email-pwd">
-          <input type="email" required name="email" />
+          <input type="email" required id="email"/>
           <span class="icon"><ion-icon name="logo-google"></ion-icon></span>
           <label>Email</label>
         </div>
-
         <div class="email-pwd">
-          <input required name="password" type="password" />
+          <input required type="password" id="password"/>
           <span class="icon"
             ><ion-icon name="lock-closed-outline"></ion-icon
           ></span>
@@ -65,11 +63,12 @@
         </div>
 
         <div class="email-pwd">
-            <input required name="" type="password" />
+            <input required type="password" id="cpassword"/>
             <label>Confirm Password</label>
           </div>
 
-        <button type="submit" class="btn"><h5>Sign up</h5></button></form>
+        <button type="submit" class="btn" id="signUpBtn"><h5>Sign up</h5></button></form>
+    </div>
 
     <script src="../js/sign-up.js" type="text/javascript"></script>
     <script

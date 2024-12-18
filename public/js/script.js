@@ -1,15 +1,14 @@
 async function fetchData() {
   try {
-    const itemValue = await fetch(`http://localhost:5000/api/products`);
+    const itemValue = await fetch(`http://localhost:5000/api/v1/products`);
 
     if (!itemValue.ok) {
       throw new Error("Could not fetch resource");
     }
 
     const Itemdata = await itemValue.json();
-
+    
     // For First Row
-
     for (let i = 0; i <= 7; i++) {
       const x = document.createElement("div");
       const contain = document.querySelector(".first-row");
@@ -28,7 +27,6 @@ async function fetchData() {
     }
 
     // For Second Row
-
     for (let i = 8; i <= 15; i++) {
       const x = document.createElement("div");
       const contain = document.querySelector(".second-row");
@@ -51,12 +49,13 @@ async function fetchData() {
 }
 
 fetchData();
-const currentPrice = document.querySelector(".price");
-console.log(currentPrice);
 
 function topFunction() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+// const currentPrice = document.querySelector(".price");
+// console.log(currentPrice);
 
 // function dollarChange(currentValue) {
 //   console.log(currentPrice);

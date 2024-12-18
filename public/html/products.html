@@ -1,88 +1,88 @@
 <html>
-    <head>
-        <title id="title"></title>
-        <link rel="stylesheet" href="../css/products.css">
-    </head>
-    <body class= "body">
-      <!-- Nav Bar -->
-    <header id="header">
-      <div id="container">
-        <a href="/" id="logo">2ndHB</a>
-        <span id="span">|</span>
-        <a href="/cart" id="myCart" class="nav">My Cart</a>
-        <a href="/contact" id="contact" class="nav">Contact Us</a>
-        <a href="/login" id="log-in" class="nav">Log In</a>
-        <a href="/signup" id="sign-up" class="nav">Sign Up</a>
+
+<head>
+  <title id="title"></title>
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+
+<body class="body">
+  <!-- Nav Bar -->
+  <header id="header">
+    <div id="container">
+      <a href="/" id="logo">2ndHB</a>
+      <span id="span">|</span>
+      <a href="/cart" id="myCart" class="nav">My Cart</a>
+      <a href="/contact" id="contact" class="nav">Contact Us</a>
+      <a href="/login" id="log-in" class="nav">Log In</a>
+      <a href="/signup" id="sign-up" class="nav">Sign Up</a>
+    </div>
+    <form action="/search" method="get">
+      <div id="container2">
+        <input name="product" id="inp" type="text" placeholder="Search 2ndHB's Products" onkeydown="" />
+
+        <button id="but" type="submit">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
       </div>
-      <form action="/search" method="get">
-        <div id="container2">
-          <input
-            name="product"
-            id="inp"
-            type="text"
-            placeholder="Search 2ndHB's Products"
-            onkeydown=""
-          />
+    </form>
+  </header>
 
-          <button id="but" type="submit">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-        </div>
-      </form>
-    </header>
+  <br />
+  <hr class="hori-rule" />
 
-    <br />
-    <hr class="hori-rule" />
-   
-       
-       <!-- Product Heading -->
-       <div id="product-heading"></div>
-    
-       <hr id="horizontal-rule1">
-    
-       <!-- Product Details -->
-       <div id="product-container">
-    
-         <div id="image"></div>
-    
-         <div id="text">
-          
-           <div id="status"></div>
-           <div id="price-value"></div>
-               
+
+  <!-- Product Heading -->
+  <div id="product-heading"></div>
+
+  <hr id="horizontal-rule1">
+
+  <!-- Product Details -->
+  <div id="product-container">
+
+    <div id="image"></div>
+
+    <div id="text">
+
+      <div id="status"></div>
+      <div id="price-value"></div>
+
+
+      <div id="rating">
+        <span onclick="starFunction(1)" class="blackStar">★</span>
+        <span onclick="starFunction(2)" class="blackStar">★</span>
+        <span onclick="starFunction(3)" class="blackStar">★</span>
+        <span onclick="starFunction(4)" class="blackStar">★</span>
+        <span onclick="starFunction(5)" class="blackStar">★</span>
+      </div>
+
+      <form id="form1">
         
-           <div id="rating">
-             <span onclick="starFunction(1)" class="blackStar">★</span>
-             <span onclick="starFunction(2)" class="blackStar">★</span>
-             <span onclick="starFunction(3)" class="blackStar">★</span>
-             <span onclick="starFunction(4)" class="blackStar">★</span>
-             <span onclick="starFunction(5)" class="blackStar">★</span>
-           </div>
 
-           <form id="product-form" method="post">
-           
-           <div id="color"><span id="color-span">Color:</span><div id="color-value">
-            <button id="btn1" class="btn-color" type="button"></button>
-            <button id="btn2" class="btn-color" type="button" ></button>
-            <button id="btn3" class="btn-color" type="button"></button>
-          </div></div>
-          <input type="text" id="color-input" name="color" required onkeydown="return false;" > 
-           
-           <div id="quantity">Quantity</div>
-            <div id="quantity-value">
-             <button id="quantity-minus" type="button"></button>
-             <input id="quantity-input" value="0" type="number" name="quantity" required></input>
-             <button id="quantity-plus" type="button"></button>
+          <div id="color"><span id="color-span">Color:</span>
+            <div id="color-value">
+              <button id="btn1" class="btn-color" type="button"></button>
+              <button id="btn2" class="btn-color" type="button"></button>
+              <button id="btn3" class="btn-color" type="button"></button>
             </div>
-    
-    
-           <div id="delivery">Delivery</div>
-           <div id="delivery-value">
+          </div>
+          <input type="text" id="color-input" name="color" required onkeydown="return false;">
 
-             <input placeholder="Street Address" type="text" onkeydown="return event.key != 'Enter';" id="delivery-input" name="address" required >
-             <br>
-             <select id="delivery-select" name="district" required>
-              <option value="">Select District</option>
+          <div id="quantity">Quantity</div>
+          <div id="quantity-value">
+            <button id="quantity-minus" type="button"></button>
+            <input id="quantity-input" value="0" type="number" name="quantity" required></input>
+            <button id="quantity-plus" type="button"></button>
+          </div>
+
+
+          <div id="delivery">Delivery</div>
+          <div id="delivery-value">
+
+            <input placeholder="Street Address" type="text" onkeydown="return event.key != 'Enter';" id="delivery-input"
+              name="address" required>
+            <br>
+            <select id="delivery-select" name="state" required>
+              <option value="">Select State</option>
               <option value="bhojpur">Bhojpur</option>
               <option value="dhankuta">Dhankuta</option>
               <option value="ilam">Ilam</option>
@@ -160,34 +160,31 @@
               <option value="dadeldhura">Dadeldhura</option>
               <option value="kanchanpur">Kanchanpur</option>
               <option value="kailali">Kailali</option>
-             </select>
-            
-           </div>
-    
-           <button id="addToCart" type="submit">Add to Cart</button>
-           <br>
-           <button id="wishlist" type="submit">Add to Wish List</button></form>
-    
-         </div>   
-       </div>
-    
-       <hr id="horizontal-rule2">
-      
-      <!-- JavaScript -->
+            </select>
+
+          </div>
+
+          <button id="addToCart" type="submit" value="add_to_cart">Add to Cart</button>
+          
+        <br>
+        <button id="wishlist" type="submit" value="add_to_wishlist">Add to Wish List</button>
+      </form>
+
+    </div>
+  </div>
+
+  <hr id="horizontal-rule2">
+
+  <!-- JavaScript -->
   <script src="../js/productFunction.js" type="text/javascript"></script>
   <script src="../js/ratingFunction.js" type="text/javascript"></script>
   <script src="../js/colorFunction.js" type="text/javascript"></script>
   <script src="../js/quantityFunction.js" type="text/javascript"></script>
   <script src="../js/wishlistFunction.js" type="text/javascript"></script>
 
-  <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    </body>
-    </html>
+</body>
+
+</html>

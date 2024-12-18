@@ -1,28 +1,28 @@
+// Front-end validators not working when add to cart/wishlist without input 
+
 async function fetchData() {
   try {
-    const productID = window.location.href.slice(-4);
-    const itemValue = await fetch(`http://localhost:5000/api/products`);
+    const productID = window.location.href.split('/').pop();
+    const itemValue = await fetch(`http://localhost:5000/api/v1/products/${productID}`);
 
     if (!itemValue.ok) {
       throw new Error("Could not fetch resource");
     }
 
-    const Itemdata = await itemValue.json();
-
-    const JSONofProduct = Itemdata.find((x) => x.id == productID);
+    const itemData = await itemValue.json();
 
     const title = document.querySelector("#title");
-    title.textContent = JSONofProduct.name;
+    title.textContent = itemData.name;
     const heading = document.querySelector("#product-heading");
     const status = document.querySelector("#status");
     const image = document.querySelector("#image");
     const price = document.querySelector("#price-value");
 
-    heading.textContent = JSONofProduct.name;
-    status.textContent = JSONofProduct.status.toUpperCase();
-    status.setAttribute("class", JSONofProduct.status);
-    image.style.backgroundImage = JSONofProduct.image;
-    price.textContent = "रू." + JSONofProduct.price;
+    heading.textContent = itemData.name;
+    status.textContent = itemData.status.toUpperCase();
+    status.setAttribute("class", itemData.status);
+    image.style.backgroundImage = itemData.image;
+    price.textContent = "रू." + itemData.price;
   } catch (error) {
     console.error(error);
   }
@@ -30,26 +30,82 @@ async function fetchData() {
 
 fetchData();
 
-// async function postData(){
-// try {
-//   const btn = document.querySelector('#addToCart')
-//   btn.addEventListener('onclick',()=>{
 
-//   })
-// } catch (error) {
-//   console.log(error)
-// }
-// }
+// Selecting values to send in req.body through POST method
+const color = document.querySelector('#color-input');
+const quantity = document.querySelector('#quantity-input');
+const address = document.querySelector('#delivery-input');
+const district = document.querySelector('#delivery-select');
 
-fetch("http://localhost:5000/", {
-  method: "POST",
-  headers: {
-    "Content-type": "application/json",
-  },
-  body: JSON.stringify({ name: "kurisu" }),
-})
-  .then((res) => {
-    return res.json();
+// API call on Add To Cart button
+const form1 = document.querySelector('#form1');
+
+form1.addEventListener('submit', async event => { 
+  
+  event.preventDefault(); // Do not know if there is any default events
+  
+  const data = {
+    'id': window.location.href.substring(window.location.href.length - 4),
+    'color': color.value,
+    'quantity': quantity.value,
+    'address': address.value,
+    'district': district.value
+  };
+  
+  const clickedButton = event.submitter; // This gets the button that triggered the submit
+  const action = clickedButton.value;    // 'add_to_cart' or 'add_to_wishlist'
+
+  if (action == 'add_to_cart') {
+    alert("Added to cart successfully");
+
+await fetch("http://localhost:5000/api/v1/cart", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(data),
   })
-  .then((data) => console.log(data))
-  .catch((error) => console.log("ERROR"));
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => console.log(data))
+    .catch(() => console.log("ERROR")); 
+  } 
+  else if (action == 'add_to_wishlist') {
+    alert("Added to wishlist successfully");
+    await fetch("http://localhost:5000/api/v1/wishlist", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => console.log(data))
+        .catch(() => console.log("ERROR"));
+  }
+}
+)
+
+// API call on Add To Wishlist button
+// const form2 = document.querySelector('#form2  ')
+
+// form2.addEventListener('submit', async event =>{
+
+//   event.preventDefault();
+  
+  
+//   const data = {
+//     'id': window.location.href.substring(window.location.href.length - 4),
+//     'color': color.value,
+//     'quantity': quantity.value,
+//     'address': address.value,
+//     'district': district.value
+//   };
+  
+  
+
+
+// })
