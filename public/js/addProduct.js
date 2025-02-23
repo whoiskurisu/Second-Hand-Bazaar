@@ -5,6 +5,7 @@ const price = document.querySelector('#price');
 const color = document.querySelector('#color');
 const quantity = document.querySelector('#quantity-input');
 const image = document.querySelector('#image');
+const form = document.querySelector('#form');
 
 // API call on Add Product button
 form.addEventListener('submit', async event => {
@@ -12,21 +13,18 @@ form.addEventListener('submit', async event => {
   event.preventDefault();
   alert("Product has been added.");
 
-  const data = {
-    'name': nameP.value,
-    'status': statusP.value,
-    'price': price.value,
-    'color': color.value,
-    'quantity': quantity.value,
-    'image': image.value,
-  };
+ // Create FormData to send file & other values
+ const formData = new FormData();
+ formData.append("name", document.querySelector("#name").value);
+ formData.append("status", document.querySelector("#status").value);
+ formData.append("price", document.querySelector("#price").value);
+ formData.append("color", document.querySelector("#color").value);
+ formData.append("quantity", document.querySelector("#quantity-input").value);
+ formData.append("productPic", document.querySelector("#image").files[0]); 
 
   await fetch("http://localhost:5000/api/v1/addProduct", {
     method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(data),
+    body: formData,
   })
     .then((res) => {
       return res.json();

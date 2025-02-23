@@ -1,10 +1,20 @@
+
+const jwtCookie = document.cookie.split('=').pop();
+
+// const decodedToken = jwtDecode(jwtCookie);
+// const email = decodedToken.email
+// console.log(jwtCookie)
+
+fetchData();
+
 async function fetchData() {
   try {
-    const cartValue = await fetch(`http://localhost:5000/api/v1/cart`); 
+    const cartValue = await fetch(`http://localhost:5000/api/v1/cart/${email}`); 
     const productValue = await fetch(`http://localhost:5000/api/v1/products`);
 
     const cartData = await cartValue.json();
     const producData = await productValue.json();
+    console.log(cartData)
 
     for (let i = 0; i < cartData.length; i++) {
       const newDiv = document.createElement("div");
@@ -36,23 +46,22 @@ async function fetchData() {
             JSONofProduct.status
           }">${JSONofProduct.status.toUpperCase()}</span>
         </div>
-        <span class="icon-close" onclick="
-          removeFn('${cartData[i]._id}')
-
-        "><ion-icon name="trash-bin-outline"></ion-icon></span>
+        <span class="icon-close"><ion-icon name="trash-bin-outline"></ion-icon></span>
       </div>`;
+
+      const deleteIcon = newDiv.querySelector(".icon-close");
+      deleteIcon.addEventListener("click", () => removeFn(cartData[i]._id));
+
     }
   } catch (error) {
     console.error(error);
   }
 }
 
-fetchData();
-
 async function removeFn(x) {
   try {
     location.reload();
-    await axios.delete(`/api/v1/cart/${x}`);
+    await axios.delete(`/api/v1/cart/${email}/${x}`);
   } catch (error) {
     console.log("Error");
   } 

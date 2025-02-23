@@ -35,20 +35,20 @@
     <hr class="hori-rule" />
 
     <div class="log-in-container">
-      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <!-- <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span> -->
 
-      <form class="form-box" action="/api/v1/login" method="post">
+      <form class="form-box">
         <h2 id="log-in-title">Log In</h2>
         <br />
         <div class="email-pwd">
-          <input name="email" type="email" required />
+          <input id="email" type="email" required />
           <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
           <label>Email</label>
         </div>
         <br />
 
         <div class="email-pwd">
-          <input name="password" type="password" required/>
+          <input id="password" type="password" required/>
           <span class="icon"
             ><ion-icon name="lock-closed-outline"></ion-icon
           ></span>
