@@ -1,8 +1,8 @@
-# Second-Hand-Bazaar (An E-Commerce Application built on Express.js)
+# Second-Hand-Bazaar (An E-Commerce Application)
 
 ## Description
 
-2ndHB is an online second-hand store built on Node.js using the Express.js framework along plain CSS, and vanilla JS on the frontend, and MongoDB for the database.
+2ndHB is an online second-hand store built on Node.js using the Express.js framework alongside plain CSS, and vanilla JS for the frontend, and MongoDB for the database.
 
 ## Getting Started
 
